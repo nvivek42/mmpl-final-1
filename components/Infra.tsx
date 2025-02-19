@@ -57,8 +57,6 @@ interface Section {
   }[];
 }
 
-
-
 const Infrastructure: FC = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [showFullContent, setShowFullContent] = useState(false);
@@ -255,25 +253,20 @@ const Infrastructure: FC = () => {
       <div className="container mx-auto">
         <div className="text-center ">
           {/* Header - Always visible */}
-
-
           <MotionDiv
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={animations.container}
-            className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900  tracking-tight ${roboto.className}`}
+            className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900 tracking-tight ${roboto.className}`}
           >
             Our Infrastructure
 
-            <div className="w-24 h-1 bg-primary mx-auto my-6 rounded-full"></div>
-            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
+            <div className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
               State-of-the-art facilities and equipment for precision manufacturing
-            </p>
+            </div>
           </MotionDiv>
-
-
-
 
           {/* Read More Button */}
           <MotionDiv
@@ -284,7 +277,7 @@ const Infrastructure: FC = () => {
           >
             <button
               onClick={() => setShowFullContent(!showFullContent)}
-              className="group inline-flex items-center px-6 py-3 text-lg font-medium text-black bg-primary rounded-lg hover:bg-primary/90 transition-colors duration-300"
+              className="group inline-flex border items-center px-3 py-3 text-lg font-medium text-black bg-primary rounded-lg hover:bg-primary/90 transition-colors duration-300 border border-gray-100"
             >
               {showFullContent ? 'Show Less' : 'Read More'}
               <ChevronDownIcon
@@ -314,12 +307,9 @@ const Infrastructure: FC = () => {
                       variants={animations.item}
                       className="bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300"
                     >
-                      <div className="flex items-center mb-6">
-                        <div className="bg-primary/10 p-3 rounded-lg">
-                          <IconWrapper Icon={section.icon} />
-                        </div>
-                        <div className="ml-4">
-                          <h2 className="text-2xl md:text-3xl font-bold text-gray-900">{section.title}</h2>
+                      <div className="flex mb-6">
+                        <div className="ml-4 text-center w-full">
+                          <span className="text-2xl md:text-3xl font-bold text-gray-900">{section.title}</span>
                           <p className="text-gray-600 mt-1">{section.description}</p>
                         </div>
                       </div>
@@ -394,63 +384,66 @@ const Infrastructure: FC = () => {
                       )}
                     </MotionDiv>
                   ))}
+                  {/* Materials & Capabilities Section */}
+                  <MotionDiv
+                    variants={animations.item}
+                    className="bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300"
+                  >
+                    <div className="flex mb-6">
+                      <div className="ml-4 text-center w-full">
+                        <span className="text-2xl md:text-3xl font-bold text-gray-900">Materials & Capabilities</span>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                      <div className="bg-gray-50 rounded-lg p-6">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-4">Aluminum Alloy Standards</h3>
+                        <ul className="space-y-3">
+                          <li className="flex items-start group">
+                            <span className="text-primary mr-3">•</span>
+                            <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
+                              DIN Standards Compliance
+                            </span>
+                          </li>
+                          <li className="flex items-start group">
+                            <span className="text-primary mr-3">•</span>
+                            <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
+                              ASTM Specifications
+                            </span>
+                          </li>
+                          <li className="flex items-start group">
+                            <span className="text-primary mr-3">•</span>
+                            <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
+                              JIS Standard Requirements
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="bg-gray-50 rounded-lg p-6">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-4">Production Capabilities</h3>
+                        <ul className="space-y-3">
+                          <li className="flex items-start group">
+                            <span className="text-primary mr-3">•</span>
+                            <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
+                              Weight Range: 0.5 to 5 Kg
+                            </span>
+                          </li>
+                          <li className="flex items-start group">
+                            <span className="text-primary mr-3">•</span>
+                            <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
+                              High-precision tolerances
+                            </span>
+                          </li>
+                          <li className="flex items-start group">
+                            <span className="text-primary mr-3">•</span>
+                            <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
+                              Complex geometries handling
+                            </span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </MotionDiv>
                 </div>
-
-                {/* Materials & Capabilities Section */}
-                <MotionDiv
-                  variants={animations.item}
-                  className="mt-16 bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300"
-                >
-                  <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">Materials & Capabilities</h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4">Aluminum Alloy Standards</h3>
-                      <ul className="space-y-3">
-                        <li className="flex items-start group">
-                          <span className="text-primary mr-3">•</span>
-                          <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
-                            DIN Standards Compliance
-                          </span>
-                        </li>
-                        <li className="flex items-start group">
-                          <span className="text-primary mr-3">•</span>
-                          <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
-                            ASTM Specifications
-                          </span>
-                        </li>
-                        <li className="flex items-start group">
-                          <span className="text-primary mr-3">•</span>
-                          <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
-                            JIS Standard Requirements
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-4">Production Capabilities</h3>
-                      <ul className="space-y-3">
-                        <li className="flex items-start group">
-                          <span className="text-primary mr-3">•</span>
-                          <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
-                            Weight Range: 0.5 to 5 Kg
-                          </span>
-                        </li>
-                        <li className="flex items-start group">
-                          <span className="text-primary mr-3">•</span>
-                          <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
-                            High-precision tolerances
-                          </span>
-                        </li>
-                        <li className="flex items-start group">
-                          <span className="text-primary mr-3">•</span>
-                          <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
-                            Complex geometries handling
-                          </span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </MotionDiv>
               </MotionDiv>
             )}
           </AnimatePresence>

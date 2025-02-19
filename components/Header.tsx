@@ -21,8 +21,8 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full bg-white px-20 py-5">
-      <div className="container mx-auto flex items-center justify-between  ">
+    <nav className="fixed w-full bg-white/90  backdrop-blur-sm top-0 z-50 shadow-md px-20 py-3">
+      <div className="relative  flex items-center justify-between flex-shrink-0  ">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-4">
           <Image 
@@ -97,7 +97,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-    </header>
+    </nav>
   );
 };
 

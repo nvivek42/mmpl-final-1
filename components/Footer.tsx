@@ -1,53 +1,38 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { SITE_TITLE, FOOTER_LINKS, CONTACT_INFO, NAV_LINKS } from '@/config/site';
+import { Chakra_Petch } from 'next/font/google';
+
+const chakraPetch = Chakra_Petch({
+  weight: ['400', '700'],
+  subsets: ['latin']
+});
+
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1A2238] text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Company Info */}
-          <div className="flex flex-col items-start">
-            <div className="flex items-center mb-4">
-              <Image 
-                src="/image/logo1.jpg" 
-                alt={`${SITE_TITLE} Logo`} 
-                width={50} 
-                height={50} 
-                className="mr-3"
-              />
-              <span className="text-xl font-bold">{SITE_TITLE}</span>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">
-              Pioneering precision manufacturing with innovative technologies and cutting-edge solutions.
-            </p>
-            <div className="flex space-x-4">
-              {/* Social Media Icons */}
-              {['linkedin', 'twitter', 'instagram'].map((platform) => (
-                <Link 
-                  key={platform} 
-                  href="#" 
-                  className="text-white hover:text-cyan-400 transition-colors"
-                >
-                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                    {/* Add appropriate SVG paths for each platform */}
-                  </svg>
-                </Link>
-              ))}
-            </div>
+    <footer className="bg-[#292929] text-white py-10">
+      <div className="container mx-auto px-2">
+        <div className="flex flex-col items-center ">
+          <div className="flex  mb-1">
+            <span className={`text-xl ${chakraPetch.className} font-bold `}>{SITE_TITLE}</span><br/>
           </div>
+          <span className={`text-xl ${chakraPetch.className} font-bold `}>Pvt Ltd</span>
+
+        </div>
+
+        <div className="flex flex-col py-5  ">
 
           {/* Quick Links */}
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-3 gap-20 ">
             {Object.entries(FOOTER_LINKS).map(([category, links]) => (
               <div key={category}>
                 <h4 className="text-lg font-semibold mb-4 text-cyan-400">{category}</h4>
                 <ul className="space-y-2">
                   {links.map((link) => (
                     <li key={link.href}>
-                      <Link 
-                        href={link.href} 
+                      <Link
+                        href={link.href}
                         className="text-gray-300 hover:text-white transition-colors text-sm"
                       >
                         {link.label}
@@ -57,10 +42,9 @@ export default function Footer() {
                 </ul>
               </div>
             ))}
-          </div>
 
-          {/* Contact Information */}
-          <div>
+              {/* Contact Information */}
+          <div >
             <h4 className="text-lg font-semibold mb-4 text-cyan-400">Contact</h4>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center">
@@ -84,12 +68,16 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+          </div>
+
+        
         </div>
+
 
         {/* Copyright and Legal */}
         <div className="mt-12 pt-8 border-t border-gray-700 text-center">
           <p className="text-sm text-gray-400">
-            {new Date().getFullYear()} {SITE_TITLE}. All Rights Reserved. 
+            {new Date().getFullYear()} {SITE_TITLE}. All Rights Reserved.
             <span className="ml-4 hidden md:inline-block">
               <Link href="/privacy" className="hover:text-white mr-4">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-white">Terms of Service</Link>

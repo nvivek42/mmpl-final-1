@@ -44,15 +44,15 @@ const About = () => {
         </div>
 
         {/* Vision and Mission Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+        <div className="text-white grid grid-cols-1 md:grid-cols-2  gap-8 mt-12 ">
           {/* Vision Card */}
           <motion.div
             {...animations}
-            className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
           >
-            <div className="flex flex-col h-full">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
-              <p className="text-gray-600 leading-relaxed">
+            <div className="flex flex-col h-full  ">
+              <h3 className=" text-black text-2xl font-bold  mb-4 text-center">Our Vision</h3>
+              <p className="text-black  leading-relaxed">
                 To be the industry leader in innovative metal manufacturing solutions, 
                 setting new standards in quality, precision, and customer satisfaction.
               </p>
@@ -63,11 +63,11 @@ const About = () => {
           <motion.div
             {...animations}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
           >
-            <div className="flex flex-col h-full">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
-              <p className="text-gray-600 leading-relaxed">
+            <div className="flex flex-col h-full ">
+              <h3 className=" text-black text-2xl font-bold  mb-4 text-center">Our Mission</h3>
+              <p className="text-black leading-relaxed">
                 To deliver excellence through cutting-edge technology, sustainable practices, 
                 and unwavering commitment to quality, while fostering innovation and growth.
               </p>

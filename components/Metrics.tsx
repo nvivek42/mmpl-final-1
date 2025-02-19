@@ -33,9 +33,9 @@ const IconWrapper: FC<IconWrapperProps> = ({ iconPath, className = "" }) => {
       <Image 
         src={iconPath}
         alt="icon"
-        width={24}
-        height={24}
-        className={`w-6 h-6 ${className}`}
+        width={40}
+        height={40}
+        className={`w-8 h-8 ${className}`}
       />
     </div>
   );
@@ -266,8 +266,8 @@ export const Metrics = () => {
                 initial="initial"
                 whileInView="whileInView"
                 transition={{ duration: 0.5 }}
-                className="relative overflow-hidden bg-gradient-to-br from-chili-600 via-chili-500 to-chili-400 rounded-xl p-8 text-white group hover:shadow-2xl transition-shadow duration-500"
-              >
+                className="relative overflow-hidden bg-gradient-to-br from-yellow-600 via-yellow-500 to-yellow-400 rounded-xl p-8 text-white group hover:shadow-2xl transition-shadow duration-500"
+                >
                 {/* Decorative Elements */}
                 <div className="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-700" />
                 <div className="absolute -right-4 -top-4 w-16 h-16 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500" />
@@ -291,8 +291,8 @@ export const Metrics = () => {
                 initial="initial"
                 whileInView="whileInView"
                 transition={{ duration: 0.5 }}
-                className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 rounded-xl p-8 text-white group hover:shadow-2xl transition-shadow duration-500"
-              >
+                className="relative overflow-hidden bg-gradient-to-br from-green-600 via-green-500 to-green-400 rounded-xl p-8 text-white group hover:shadow-2xl transition-shadow duration-500"
+                >
                 {/* Decorative Elements */}
                 <div className="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-700" />
                 <div className="absolute -right-4 -top-4 w-16 h-16 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500" />
@@ -316,8 +316,8 @@ export const Metrics = () => {
                 initial="initial"
                 whileInView="whileInView"
                 transition={{ duration: 0.5 }}
-                className="relative overflow-hidden bg-gradient-to-br from-green-600 via-green-500 to-green-400 rounded-xl p-8 text-white group hover:shadow-2xl transition-shadow duration-500"
-              >
+                className="relative overflow-hidden bg-gradient-to-br from-purple-600 via-pink-500 to-red-400 rounded-xl p-8 text-white group hover:shadow-2xl transition-shadow duration-500"
+                >
                 {/* Decorative Elements */}
                 <div className="absolute -right-8 -top-8 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-700" />
                 <div className="absolute -right-4 -top-4 w-16 h-16 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-500" />

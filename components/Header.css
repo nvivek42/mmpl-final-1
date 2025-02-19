@@ -67,10 +67,9 @@
   position: relative;
   background: linear-gradient(
     to right,
-    #6A89A7 20%,
-    #BDDDFC 30%,
-    #88BDF2 70%,
-    #384959 80%
+    #0F0F0F 20%,
+    #FF4D4D 70%,
+    #898989 80%
   );
   -webkit-background-clip: text;
   background-clip: text;

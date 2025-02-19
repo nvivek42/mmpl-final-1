@@ -51,7 +51,7 @@ export default function Hero() {
              <div>
               Built on Precision,
             <br />
-              Driven by Innovation.
+              Driven by Innovation!
             </div>            
           </h1>
 

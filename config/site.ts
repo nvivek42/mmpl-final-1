@@ -1,6 +1,6 @@
 // Site-wide configuration and constants
 
-export const SITE_TITLE = 'Metalmach Mastery';
+export const SITE_TITLE = 'METALMACH MASTERY';
 
 export const NAV_LINKS = [
   { 
@@ -33,7 +33,7 @@ export const FOOTER_LINKS = {
   Company: [
     { href: '/about', label: 'About Us' },
     { href: '/careers', label: 'Careers' },
-    { href: '/news', label: 'News' }
+    // { href: '/news', label: 'News' }
   ],
   Services: [
     { href: '/services/casting', label: 'Metal Casting' },
@@ -46,5 +46,5 @@ export const FOOTER_LINKS = {
 export const CONTACT_INFO = {
   phone: "+91 70304 09930",
   email: "srjoshi@metalmach.in",
-  address: 'PLOT NO. F-39, CHINCHOLI MIDC, SOLAPUR, MAHARASHTRA, INDIA. PIN CODE: 413255'
+  address: 'F-39,Chincholi MIDC,Solapur,Maharashtra,India. PIN:413255'
 };

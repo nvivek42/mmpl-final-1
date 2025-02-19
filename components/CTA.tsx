@@ -6,13 +6,13 @@ export default function CTA() {
     <section className="w-full bg-white px-20 py-20">
       <div className="container mx-auto">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-black sm:text-4xl">
+          <span className="text-3xl font-bold text-black sm:text-4xl">
             Ready to Start Your Project?
-          </h2>
+          </span>
           <p className="mt-4 text-xl text-black/90">
             Let's discuss how we can help bring your ideas to life
           </p>
-          <div className="mt-8 flex justify-center">
+          <div className="mt-6 flex justify-center">
             <motion.a
               href="#contact"
               className="group relative inline-flex h-14 items-center justify-center overflow-hidden rounded-full border-2 border-black bg-black px-8 transition-all duration-300"

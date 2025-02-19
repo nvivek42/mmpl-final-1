@@ -70,7 +70,10 @@ const Features: FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900 tracking-tight ${roboto.className} `}
           >
-            Why Choose MMPL?
+            Why Choose MMPL?<br/>
+            <p className="text-xl text-gray-600 max-w-3xl py-2 mx-auto">
+            Discover the unique advantages that set us apart
+          </p>
           </motion.h2>
           <motion.div 
             initial={{ scaleX: 0 }}
@@ -80,9 +83,9 @@ const Features: FC = () => {
           />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 text-center">
           {features.map((feature, index) => {
-            const Icon = feature.icon;
+            // const Icon = feature.icon;
             return (
               <motion.div
                 key={feature.title}
@@ -103,9 +106,9 @@ const Features: FC = () => {
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-primary/2 to-transparent 
                               opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 
-                <div className="relative">
+                {/* <div className="relative">
                   <Icon className="h-10 w-10 text-primary mb-4 transform group-hover:scale-110 transition-transform duration-300" />
-                </div>
+                </div> */}
 
                 <h3 className="text-xl font-semibold mb-4 text-gray-900 group-hover:text-primary transition-colors duration-300">
                   {feature.title}
