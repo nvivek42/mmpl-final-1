@@ -45,9 +45,9 @@ export default function Hero() {
       </div>
 
       {/* Text Column */}
-      <div className="px-4 md:px-8 lg:px-12 py-16 text-white relative z-10 text-left max-w-[1400px] w-full">
+      <div className="px-4 md:px-8 lg:px-20 py-16 text-white relative z-10 text-left max-w-[1400px] w-full">
         <div className="space-y-6 ml-0 md:ml-4 lg:ml-8">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-['Outfit'] mb-6 py-10 leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-['Outfit'] mb-6 py-20 leading-tight">
              <div>
               Built on Precision,
             <br />
@@ -56,7 +56,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl mb-8  font-light tracking-wide text-white smooth-fade-in">
-            <br/><br/><br/>            
+            <br/> 
             Transforming Complex Manufacturing Challenges into Innovative Solutions
           </p>
           <div className="space-x-4 smooth-fade-in-buttons">

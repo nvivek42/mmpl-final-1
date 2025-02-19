@@ -46,5 +46,6 @@ export const FOOTER_LINKS = {
 export const CONTACT_INFO = {
   phone: "+91 70304 09930",
   email: "srjoshi@metalmach.in",
-  address: 'F-39,Chincholi MIDC,Solapur,Maharashtra,India. PIN:413255'
+  address: "F-39,Chincholi MIDC,Solapur",
+  address1:"Mah,India - 413255",
 };
