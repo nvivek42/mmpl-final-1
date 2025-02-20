@@ -248,9 +248,9 @@ const Infrastructure: FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className="w-full bg-white px-20 py-10 "
+      className="w-full bg-white px-4 sm:px-6 lg:px-20 py-6 sm:py-10"
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto max-w-7xl">
         <div className="text-center ">
           {/* Header - Always visible */}
           <MotionDiv
@@ -262,9 +262,9 @@ const Infrastructure: FC = () => {
           >
             Our Infrastructure
 
-            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
-            <div className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-              State-of-the-art facilities and equipment for precision manufacturing
+            <div className="w-16 sm:w-24 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            <div className="mt-4 text-base sm:text-xl text-gray-600 max-w-3xl mx-auto px-4">
+                  State-of-the-art facilities and equipment for precision manufacturing
             </div>
           </MotionDiv>
 
@@ -273,16 +273,16 @@ const Infrastructure: FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-center mt-12"
+            className="text-center mt-8 sm:mt-12"
           >
             <button
               onClick={() => setShowFullContent(!showFullContent)}
-              className="group inline-flex border items-center px-3 py-3 text-lg font-medium text-black bg-primary rounded-lg hover:bg-primary/90 transition-colors duration-300 border border-gray-100"
+              className="group inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 text-base sm:text-lg font-medium text-black bg-primary rounded-lg hover:bg-primary/90 transition-colors duration-300 border border-gray-100"
             >
               {showFullContent ? 'Show Less' : 'Read More'}
               <ChevronDownIcon
-                className={`w-5 h-5 ml-2 transform transition-transform duration-300 ${showFullContent ? 'rotate-180' : ''
-                  }`}
+className={`w-4 h-4 sm:w-5 sm:h-5 ml-2 transform transition-transform duration-300 ${
+  showFullContent ? 'rotate-180' : ''                  }`}
               />
             </button>
           </MotionDiv>
@@ -297,7 +297,7 @@ const Infrastructure: FC = () => {
                 variants={animations.expand}
               >
                 {/* Main Sections */}
-                <div className="space-y-16 mt-16">
+                <div className="space-y-8 sm:space-y-16 mt-8 sm:mt-16">
                   {sections.map((section, index) => (
                     <MotionDiv
                       key={section.title}
@@ -305,20 +305,20 @@ const Infrastructure: FC = () => {
                       whileInView="visible"
                       viewport={{ once: true, margin: "-100px" }}
                       variants={animations.item}
-                      className="bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300"
+                      className="bg-white rounded-xl shadow-xl p-4 sm:p-8 hover:shadow-2xl transition-shadow duration-300"
                     >
-                      <div className="flex mb-6">
-                        <div className="ml-4 text-center w-full">
-                          <span className="text-2xl md:text-3xl font-bold text-gray-900">{section.title}</span>
-                          <p className="text-gray-600 mt-1">{section.description}</p>
+                      <div className="flex mb-4 sm:mb-6">
+                        <div className="text-center w-full">
+                          <span className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">{section.title}</span>
+                          <p className="text-sm sm:text-base text-gray-600 mt-2">{section.description}</p>
                         </div>
                       </div>
 
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-6 sm:mb-8">
                         {section.items.map((item, i) => (
                           <MotionDiv
                             key={i}
-                            className="bg-gray-50 rounded-lg p-6"
+                            className="bg-gray-50 rounded-lg p-4 sm:p-6"
                             variants={{
                               hidden: { opacity: 0, x: -20 },
                               visible: {
@@ -328,13 +328,13 @@ const Infrastructure: FC = () => {
                               }
                             }}
                           >
-                            <h3 className="text-xl font-semibold text-gray-900 mb-4">{item.title}</h3>
-                            <ul className="space-y-3">
+                            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">{item.title}</h3>
+                            <ul className="space-y-2 sm:space-y-3">
                               {item.details.map((detail, j) => (
                                 <li key={j} className="flex items-start group">
-                                  <span className="text-primary mr-3">•</span>
-                                  <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
-                                    {detail}
+                                   <span className="text-primary mr-2 sm:mr-3 mt-1">•</span>
+                                  <span className="text-sm sm:text-base text-gray-700 group-hover:text-gray-900 transition-colors">
+                                   {detail}
                                   </span>
                                 </li>
                               ))}
@@ -345,8 +345,8 @@ const Infrastructure: FC = () => {
 
                       {section.images && (
                         <MotionDiv
-                          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-                          variants={{
+                        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+                        variants={{
                             hidden: { opacity: 0 },
                             visible: {
                               opacity: 1,
@@ -357,7 +357,7 @@ const Infrastructure: FC = () => {
                           {section.images.map((image, i) => (
                             <MotionDiv
                               key={i}
-                              className="relative h-48 rounded-xl overflow-hidden group"
+                              className="relative h-40 sm:h-48 rounded-xl overflow-hidden group"
                               variants={{
                                 hidden: { opacity: 0, scale: 0.8 },
                                 visible: {
@@ -374,7 +374,7 @@ const Infrastructure: FC = () => {
                                 fill
                                 className="object-cover transition-transform duration-300 group-hover:scale-110"
                               />
-                              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-3 text-sm font-medium backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                              <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 sm:p-3 text-xs sm:text-sm font-medium backdrop-blur-sm transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                                 <p className="font-semibold">{image.alt}</p>
                                 <p className="text-xs text-gray-200 mt-1">{image.description}</p>
                               </div>
@@ -387,17 +387,17 @@ const Infrastructure: FC = () => {
                   {/* Materials & Capabilities Section */}
                   <MotionDiv
                     variants={animations.item}
-                    className="bg-white rounded-xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300"
+                    className="bg-white rounded-xl shadow-xl p-4 sm:p-8 hover:shadow-2xl transition-shadow duration-300"
                   >
-                    <div className="flex mb-6">
-                      <div className="ml-4 text-center w-full">
-                        <span className="text-2xl md:text-3xl font-bold text-gray-900">Materials & Capabilities</span>
+                    <div className="flex mb-4 sm:mb-6">
+                      <div className="text-center w-full">
+                        <span className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">Materials & Capabilities</span>
                       </div>
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                      <div className="bg-gray-50 rounded-lg p-6">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-4">Aluminum Alloy Standards</h3>
-                        <ul className="space-y-3">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-8 mb-4 sm:mb-8">
+                      <div className="bg-gray-50 rounded-lg p-4 sm:p-6">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">Aluminum Alloy Standards</h3>
+                        <ul className="space-y-2 sm:space-y-3">
                           <li className="flex items-start group">
                             <span className="text-primary mr-3">•</span>
                             <span className="text-gray-700 group-hover:text-gray-900 transition-colors">
@@ -418,9 +418,9 @@ const Infrastructure: FC = () => {
                           </li>
                         </ul>
                       </div>
-                      <div className="bg-gray-50 rounded-lg p-6">
-                        <h3 className="text-xl font-semibold text-gray-900 mb-4">Production Capabilities</h3>
-                        <ul className="space-y-3">
+                      <div className="bg-gray-50 rounded-lg p-4 sm:p-6">
+                        <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">Production Capabilities</h3>
+                        <ul className="space-y-2 sm:space-y-3">
                           <li className="flex items-start group">
                             <span className="text-primary mr-3">•</span>
                             <span className="text-gray-700 group-hover:text-gray-900 transition-colors">

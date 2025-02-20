@@ -168,10 +168,11 @@ export const Metrics = () => {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   Operational Excellence
                 </h2>
-                <div className="w-20 h-1.5 bg-gradient-to-r from-primary/60 to-primary rounded-full mx-auto mb-6"></div>
-                <p className="text-gray-600 max-w-3xl mx-auto">
-                  Our commitment to maintaining the highest standards of manufacturing excellence
-                  through continuous monitoring and improvement of key performance indicators.
+                <div className="w-20 h-1.5 bg-gradient-to-r from-primary/60 to-primary rounded-full mx-auto mb-4"></div>
+                <p className="text-gray-600 max-w-3xl mx-auto "><i>
+                  {/* Our commitment to maintaining the highest standards of manufacturing excellence
+                  through continuous monitoring and improvement of key performance indicators. */}
+                  Setting Standards, Not Just Meeting Them</i>
                 </p>
               </motion.div>
             </div>

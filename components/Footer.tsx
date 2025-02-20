@@ -9,23 +9,32 @@ const chakraPetch = Chakra_Petch({
 
 export default function Footer() {
   return (
-    <footer className="bg-[#708090] text-white py-10">
-      <div className="container mx-auto px-20">
-        <div className="flex flex-col items-center mb-8">
-          <div className="flex mb-1">
-            <span className={`text-4xl ${chakraPetch.className} font-bold`}>Metalmach Mastery Pvt Ltd</span>
+    <footer className="bg-[#708090] text-white py-6 sm:py-8 lg:py-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-20">
+        {/* Title */}
+        <div className="flex flex-col items-center mb-6 sm:mb-8">
+          <div className="flex mb-1 text-center">
+            <span className={`text-2xl sm:text-3xl lg:text-4xl ${chakraPetch.className} font-bold px-4`}>
+              Metalmach Mastery Pvt Ltd
+            </span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 py-5">
+        {/* Main Content Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 py-3 sm:py-5">
           {/* Quick Links */}
           {Object.entries(FOOTER_LINKS).map(([category, links]) => (
-            <div key={category} className="space-y-4">
-              <h4 className="text-lg font-semibold text-white">{category}</h4>
-              <ul className="space-y-2">
+            <div key={category} className="space-y-3 sm:space-y-4 px-4 sm:px-0">
+              <h4 className="text-base sm:text-lg font-semibold text-white text-center sm:text-left">
+                {category}
+              </h4>
+              <ul className="space-y-2 text-center sm:text-left">
                 {links.map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="hover:text-white transition-colors text-base">
+                    <Link 
+                      href={link.href} 
+                      className="hover:text-white transition-colors text-sm sm:text-base block py-1 sm:py-0"
+                    >
                       {link.label}
                     </Link>
                   </li>
@@ -35,11 +44,13 @@ export default function Footer() {
           ))}
 
           {/* Contact Information */}
-          <div className="space-y-4 ">
-            <h4 className="text-lg text-white font-semibold">Contact</h4>
-            <ul className="space-y-3 text-base">
-              <li className="flex items-center">
-                <svg className="w-5 h-5 mr-3 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="space-y-3 sm:space-y-4 px-4 sm:px-0">
+            <h4 className="text-base sm:text-lg text-white font-semibold text-center sm:text-left">
+              Contact
+            </h4>
+            <ul className="space-y-3 text-sm sm:text-base">
+              <li className="flex items-center justify-center sm:justify-start">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -47,10 +58,10 @@ export default function Footer() {
                     d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                   />
                 </svg>
-                {CONTACT_INFO.email}
+                <span className="break-all">{CONTACT_INFO.email}</span>
               </li>
-              <li className="flex items-center">
-                <svg className="w-5 h-5 mr-3 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <li className="flex items-center justify-center sm:justify-start">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -60,8 +71,8 @@ export default function Footer() {
                 </svg>
                 {CONTACT_INFO.phone}
               </li>
-              <li className="flex items-start">
-                <svg className="w-5 h-5 mr-3 mt-1 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <li className="flex items-start justify-center sm:justify-start">
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 mr-2 sm:mr-3 mt-1 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -75,7 +86,7 @@ export default function Footer() {
                     d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
-                <span>
+                <span className="text-center sm:text-left">
                   {CONTACT_INFO.address}
                   <br />
                   {CONTACT_INFO.address1}
@@ -86,21 +97,22 @@ export default function Footer() {
         </div>
 
         {/* Copyright and Legal */}
-        <div className="mt-12 pt-8 border-t border-black text-center">
-          <p className="text-sm text-white">
-            {new Date().getFullYear()} {SITE_TITLE}. All Rights Reserved.
-            <span className="ml-4 hidden md:inline-block">
-              <Link href="/privacy" className="hover:text-white mr-4">
+        <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-black">
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0">
+            <p className="text-xs sm:text-sm text-white text-center">
+              {new Date().getFullYear()} {SITE_TITLE}. All Rights Reserved.
+            </p>
+            <div className="flex space-x-4 sm:ml-4">
+              <Link href="/privacy" className="text-xs sm:text-sm hover:text-white">
                 Privacy Policy
               </Link>
-              <Link href="/terms" className="hover:text-white">
+              <Link href="/terms" className="text-xs sm:text-sm hover:text-white">
                 Terms of Service
               </Link>
-            </span>
-          </p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   )
 }
-

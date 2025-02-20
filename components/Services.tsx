@@ -1,15 +1,20 @@
 'use client'
-import { motion } from 'framer-motion'
-import { CogIcon, CubeIcon, BeakerIcon } from '@heroicons/react/24/outline'
+
+import React from 'react';
 import { Roboto } from 'next/font/google'
 
-const roboto = Roboto({ weight: ['400'], subsets: ['latin'] })
-export default function Services() {
+const roboto = Roboto({
+  weight: ['400'],
+  subsets: ['latin']
+})
+
+
+const Services = () => {
   const services = [
     {
       title: 'Gravity Die Casting',
       description: 'Specialized in aluminum alloy components ranging from 0.5 to 5 kg',
-      bgImage: '/img/gdc.jpg' // Make sure this image exists in your public folder
+      bgImage: '/img/gdc.jpg'
     },
     {
       title: 'Precision Machining',
@@ -21,53 +26,61 @@ export default function Services() {
       description: 'Customer-specific development and solutions',
       bgImage: '/img/cpd.jpg'
     },
-  ]
+  ];
 
   return (
-    <section className="w-full bg-white px-20 py-10">
-      <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div className="text-center">
-          <div className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900 tracking-tight ${roboto.className}`}>
+    <section className="w-full  px-4 sm:px-6 lg:px-20 py-14 ">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight ${roboto.className}`}
+          >
             What We Do
-          </div>
+          </h2>
+          <p className="text-gray-600 max-w-3xl mx-auto py-5 "><i>
+            {/* Our commitment to maintaining the highest standards of manufacturing excellence
+            through continuous monitoring and improvement of key performance indicators. */}
+           Your Vision, Our Expertise: Aluminum Solutions Tailored for You</i>
+          </p>
         </div>
 
-        <div className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="relative p-8 rounded-lg overflow-hidden group hover:transform hover:scale-105 transition-all duration-300 h-[300px] cursor-pointer font-monospace"
-            >
-              {/* Background Image with Reduced Blur */}
+              className="group relative h-[300px] sm:h-[350px] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
+            > 
+           
+              {/* Background Image with Parallax Effect */}
               <div 
-                className="absolute inset-0 bg-cover bg-center z-0 transition-transform duration-500 group-hover:scale-110 font-monospace"
+                className="absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-110"
                 style={{ 
                   backgroundImage: `url(${service.bgImage})`,
-                  filter: 'blur(1px)', // Reduced blur
-                  transform: 'scale(1.05)',
+                  transform: 'scale(1.01)',
                 }}
-              />
-              
-              {/* Overlay */}
-              <div className="absolute inset-0 bg-black/40 z-10 group-hover:bg-black/30 transition-colors duration-300 font-monospace" />
+              >
+                {/* Animated Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-500" />
+                
+                {/* Particle Effect Overlay (CSS-only) */}
+                <div className="absolute inset-0 opacity-30 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[length:20px_20px]" />
+              </div>
 
-              {/* Content */}
-              <div className="relative z-20 h-full flex flex-col justify-center">
-                {/* Text Content */}
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-white mb-4">
+              {/* Content Container */}
+              <div className="relative h-full p-6 flex flex-col justify-end">
+                {/* Text Content with Slide-up Animation */}
+                <div className="transform transition-all duration-500 group-hover:translate-y-0 translate-y-4">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-white transition-colors duration-300">
                     {service.title}
                   </h3>
-                  <p className="text-white text-lg">
+                  <p className="text-gray-200 text-lg mb-6 opacity-0 group-hover:opacity-100 transition-all duration-500 delay-100">
                     {service.description}
                   </p>
-                </div>
-
-                {/* Hover Effect Button */}
-                <div className="mt-6 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 font-monospace ">
-                  <button className="w-full py-2 px-4 bg-orange/10 hover:bg-white/20 text-Red rounded-md backdrop-blur-sm transition-all border border-Red/30">
-                    Read More
-                  </button>
+                  
+                  {/* Button with Glow Effect */}
+                  <button className="w-full py-2.5 px-4 bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 border border-white/10 relative overflow-hidden ">
+                    <span className="relative z-10">Read More</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                  </button><br/><br/>
                 </div>
               </div>
             </div>
@@ -75,5 +88,7 @@ export default function Services() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default Services;

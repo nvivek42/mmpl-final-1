@@ -37,7 +37,8 @@ export default function Hero() {
        style={{
          backgroundImage: `url('/image/background.jpg')`,
          backgroundSize: "cover",
-         backgroundPosition: "top center"
+         backgroundPosition: "top center",
+         width: "100%",
        }}
       >
         <div className="absolute inset-0 animate-water-reflection" />

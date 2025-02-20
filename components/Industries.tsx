@@ -11,7 +11,7 @@ export default function Industries() {
 
   return (
     <section className="w-full bg-white px-20 py-10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
 
         <div className="text-center">
           <div className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900 tracking-tight ${roboto.className}`}>

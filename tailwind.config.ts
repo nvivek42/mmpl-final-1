@@ -9,19 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // chili: {
-        //   600: '#FFFBEC',
-        //   500: '#FFD700',
-        //   400: '#FFE699',
-        // },
-        // blue: {
-        //   600: '#42EAFF',
-        //   500: '#4272FF',
-        //   400: '#42EAFF',
-        // },
-        // green: {
-        //   600: '#89F336',
-        //   500: '#38A711',
+        
+        
         //   400: '#89F336',
         // },
         yellow: {
