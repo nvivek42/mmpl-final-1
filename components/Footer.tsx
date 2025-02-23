@@ -23,6 +23,7 @@ export default function Footer() {
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 py-3 sm:py-5">
           {/* Quick Links */}
+          <div className="grid grid-cols-2 md:col-span-2 lg:col-span-2 gap-6 sm:gap-8">
           {Object.entries(FOOTER_LINKS).map(([category, links]) => (
             <div key={category} className="space-y-3 sm:space-y-4 px-4 sm:px-0">
               <h4 className="text-base sm:text-lg font-semibold text-white text-center sm:text-left">
@@ -42,7 +43,7 @@ export default function Footer() {
               </ul>
             </div>
           ))}
-
+</div>
           {/* Contact Information */}
           <div className="space-y-3 sm:space-y-4 px-4 sm:px-0">
             <h4 className="text-base sm:text-lg text-white font-semibold text-center sm:text-left">

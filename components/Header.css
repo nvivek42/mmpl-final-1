@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;700&display=swap');
 
-/* Note: You can remove this import if you're already using next/font/google in your component */
+
 
 .site-title, .nav-link {
   font-family: 'Chakra Petch', sans-serif;
@@ -120,3 +120,249 @@
     transition: none;
   }
 }
+
+/* Logo styles */
+
+/* Base wrapper to control overall logo size */
+.logo-main {
+  display: block;
+  width: 10vw; /* Use viewport width for responsiveness */
+  max-width: 50px; /* Set a maximum width */
+  height: auto;
+}
+
+.logo-container {
+  position: relative;
+  width: 10vw; /* Use viewport width for responsiveness */
+  max-width: 50px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+
+}
+
+.logo-border1 {
+  position: relative;
+  width: 45px;
+  height: 52px;
+  border-bottom: 8px solid #4E5158;
+  border-left: 8px solid #4E5158;
+  border-right: none;
+  box-sizing: border-box;
+}
+
+.logo-border1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  border-top: 8px solid #4E5158;
+}
+
+.logo-tall-rectangle {
+  position: absolute;
+  top: 0;
+  left: 13px;
+  width: 8px;
+  height: 16px;
+  background-color: #FF6701;
+  border-bottom-right-radius: 5px;
+}
+
+.logo-chevron-container {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+  
+}
+
+.logo-chevron {
+  position: relative;
+  margin-left: 8px auto;
+  margin-top: 0;
+  width: 37px;
+  height: 6.5px;
+  
+}
+
+.logo-chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  /* left: -8px; */
+  height: 100%;
+  width: 50%;
+  background: #4E5158;
+  transform: skew(0deg, 30deg);
+}
+
+.logo-chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18.5px;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: #4E5158;
+  transform: skew(0deg, -30deg);
+}
+
+.chevron-yellow:before,
+.chevron-yellow:after {
+  background: #FFDB00;
+}
+
+.logo-mmpl-text {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  transform: none;
+  font-family: 'Chakra Petch';
+  font-size: 2vw; /* Use viewport width for responsiveness */
+  font-weight: 1000;
+  color: #4E5158;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .logo-main {
+    width: 50px;
+    /* height: 62.5px; */
+  }
+
+  .logo-mmpl-text {
+    font-size: 10px;
+  }
+}
+
+/* Add these animations to your existing CSS while keeping all your original CSS */
+
+/* Initial states */
+.logo-tall-rectangle {
+  height: 0;
+}
+
+.logo-chevron {
+  opacity: 0;
+}
+
+.logo-mmpl-text {
+  color: transparent;
+}
+
+.logo-border1 {
+  border-color: transparent;
+}
+
+.logo-border1::before {
+  border-top-color: transparent;
+}
+
+
+@keyframes fillBorder {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #4E5158;
+  }
+}
+
+@keyframes fillBorderTop {
+  from {
+    border-top-color: transparent;
+  }
+  to {
+    border-top-color: #4E5158;
+  }
+}
+
+@keyframes fillRectangle {
+  from {
+    height: 0;
+  }
+  to {
+    height: 16px;
+  }
+}
+
+@keyframes fillChevron {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillText {
+  from {
+    color: transparent;
+  }
+  to {
+    color: #4E5158;
+  }
+}
+
+/* Animation classes */
+.animate-border {
+  animation: fillBorder 0.5s ease-out forwards;
+}
+
+.animate-border::before {
+  animation: fillBorderTop 0.5s ease-out forwards;
+}
+
+.logo-tall-rectangle {
+  height: 0;
+  animation: fillRectangle 0.5s ease-out 0.5s forwards;
+}
+
+.animate-chevron-1 {
+  opacity: 0;
+  animation: fillChevron 0.3s ease-out 1s forwards;
+}
+
+.animate-chevron-2 {
+  opacity: 0;
+  animation: fillChevron 0.3s ease-out 1.3s forwards;
+}
+
+.animate-chevron-3 {
+  opacity: 0;
+  animation: fillChevron 0.3s ease-out 1.6s forwards;
+}
+
+.animate-text {
+  color: transparent;
+  animation: fillText 0.3s ease-out 1.9s forwards;
+}
+
+/* Add this to ensure chevrons maintain their shape */
+.logo-chevron:before,
+.logo-chevron:after {
+  transition: background-color 0.3s ease-out;
+}
+
+/* Optional: Add animation reset on hover */
+/* .logo-main:hover .animate-border,
+.logo-main:hover .animate-border::before,
+.logo-main:hover .logo-tall-rectangle,
+.logo-main:hover .animate-chevron-1,
+.logo-main:hover .animate-chevron-2,
+.logo-main:hover .animate-chevron-3,
+.logo-main:hover .animate-text {
+  animation: none;
+  opacity: 1;
+  transform: none;
+  height: auto;
+  color: inherit;
+  border-color: inherit;
+} */

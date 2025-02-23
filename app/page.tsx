@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
 import Industries from '../components/Industries'
@@ -10,10 +9,7 @@ import About from '@/components/About'
 
 export default function Home() {
   return (
-    <>
-    <Head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </Head>
+   
     <main>
       <Hero />
       <About />
@@ -24,7 +20,6 @@ export default function Home() {
       <Features />      
       <CTA />
     </main>
-    </>
 
   )
 }
