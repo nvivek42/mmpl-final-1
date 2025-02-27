@@ -14,17 +14,17 @@ const Services = () => {
     {
       title: 'Gravity Die Casting',
       description: 'Specialized in aluminum alloy components ranging from 0.5 to 5 kg',
-      bgImage: '/img/gdc.jpg'
+      bgImage: '/image/misc/gdc.webp'
     },
     {
       title: 'Precision Machining',
       description: 'Advanced component machining with high precision',
-      bgImage: '/img/pm.jpg'
+      bgImage: '/image/misc/pm.webp'
     },
     {
       title: 'Custom Development',
       description: 'Customer-specific development and solutions',
-      bgImage: '/img/cpd.jpg'
+      bgImage: '/image/misc/cd.jpg'
     },
   ];
 

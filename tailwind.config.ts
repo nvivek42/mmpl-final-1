@@ -9,16 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        
-        
-        //   400: '#89F336',
-        // },
+
         yellow: {
           600: '#636B2F',
           500: '#BAC095',
           400: '#3D4127',
         },
-       
+
         purple: {
           600: '#9B5DE5',
           500: '#8E44AD',
@@ -34,7 +31,7 @@ const config: Config = {
           500: '#FF3D3D',
           400: '#FF7A7A',
         },
-        
+
         blue: {
           600: '#00CFFF',
           500: '#007BFF',
@@ -45,11 +42,9 @@ const config: Config = {
           500: '#68BA7F',
           400: '#253D2C',
         },
-        
-    
-      
-        gray:{
-       100: ' #71797E'
+
+        gray: {
+          100: ' #71797E'
         }
       },
       animation: {

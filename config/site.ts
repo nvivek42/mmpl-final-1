@@ -8,7 +8,7 @@ export const NAV_LINKS = [
     label: 'Home' 
   },
   { 
-    href: '/services', 
+    href: '/Services', 
     label: 'Services',
     subLinks: [
       { href: '/services/casting', label: 'Metal Casting' },
@@ -33,7 +33,6 @@ export const FOOTER_LINKS = {
   Company: [
     { href: '/about', label: 'About Us' },
     { href: '/careers', label: 'Careers' },
-    // { href: '/news', label: 'News' }
   ],
   Services: [
     { href: '/services/casting', label: 'Metal Casting' },

@@ -66,49 +66,49 @@ const industries = [
   {
     title: 'Agriculture',
     description: 'High-performance components for aviation and space exploration.',
-    image: '/img/industries/agri.jpg',
+    image: '/image/industries/agri.jpg',
     priority: true,
-    blurDataURL: '/img/industries/agri.jpg',
+    blurDataURL: '/image/industries/agri.jpg',
   },
   {
     title: 'Automotive',
     description: 'Precision parts for automotive manufacturing and assembly.',
-    image: '/img/industries/automotive.jpg',
+    image: '/image/industries/automotive.jpg',
     priority: true,
-    blurDataURL: '/img/industries/automotive.jpg',
+    blurDataURL: '/image/industries/automotive.jpg',
   },
   {
     title: 'Infrastructure',
     description: 'Durable components for power generation and distribution.',
-    image: '/img/industries/infra.jpg',
+    image: '/image/industries/infra.jpg',
     priority: true,
-    blurDataURL: '/img/industries/infra.jpg',
+    blurDataURL: '/image/industries/infra.jpg',
   },
   {
     title: 'E-Mobility',
     description: 'Precision components for medical devices and equipment.',
-    image: '/img/industries/e-mobility.jpg',
+    image: '/image/industries/e-mobility.jpg',
     priority: true,
-    blurDataURL: '/img/industries/e-mobility.jpg',
+    blurDataURL: '/image/industries/e-mobility.jpg',
   },
   {
     title: 'Defense',
     description: 'Critical components for defense and military applications.',
-    image: '/img/industries/defense.jpg',
+    image: '/image/industries/defense.jpg',
     priority: true,
-    blurDataURL: '/img/industries/defense.jpg',
+    blurDataURL: '/image/industries/defense.jpg',
   },
   {
     title: 'Energy',
     description: 'Robust solutions for industrial machinery and equipment.',
-    image: '/img/industries/energy.jpg',
+    image: '/image/industries/energy.jpg',
     priority: true,
-    blurDataURL: '/img/industries/energy.jpg',
+    blurDataURL: '/image/industries/energy.jpg',
   },
   {
     title: 'Construction',
     description: 'Precision components for medical devices and equipment.',
-    image: '/img/industries/construction.jpg',
+    image: '/image/industries/construction.jpg',
     priority: true, // Load first
     blurDataURL: 'data:image/jpeg;base64,/9j...' // Add base64 blur image
 
@@ -116,14 +116,14 @@ const industries = [
   {
     title: 'Oil & Gas',
     description: 'Critical components for defense and military applications.',
-    image: '/img/industries/oil.jpg',
+    image: '/image/industries/oil.jpg',
     priority: true, // Load first
     blurDataURL: 'data:image/jpeg;base64,/9j...' // Add base64 blur image
   },
   {
     title: 'Communication',
     description: 'Robust solutions for industrial machinery and equipment.',
-    image: '/img/industries/communication.jpg',
+    image: '/image/industries/communication.jpg',
     priority: true, // Load first
     blurDataURL: 'data:image/jpeg;base64,/9j...' // Add base64 blur image
   }

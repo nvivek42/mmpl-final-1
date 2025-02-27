@@ -9,14 +9,14 @@ const roboto = Roboto({
 
 const About = () => {
   const animations = {
-    initial: { opacity: 0, y: 20 },
+    initial: { opacity: 0, y: 10 },
     whileInView: { opacity: 1, y: 0 },
     transition: { duration: 0.5 }
   }
 
   return (
     <section className="w-full bg-white px-4 sm:px-6 md:px-8 lg:px-20 py-8 sm:py-12 lg:py-16">
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto max-w-5xl">
         {/* Heading */}
         <div className="text-center mb-8 sm:mb-12">
           <motion.h2 
@@ -48,7 +48,7 @@ const About = () => {
           {/* Vision Card */}
           <motion.div
             {...animations}
-            className="bg-white rounded-lg sm:rounded-xl p-6 sm:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100"
+            className="bg-white rounded-lg sm:rounded-xl p-6 sm:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-900"
           >
             <div className="flex flex-col h-full">
               <h3 className="text-black text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-center">
@@ -65,7 +65,7 @@ const About = () => {
           <motion.div
             {...animations}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="bg-white rounded-lg sm:rounded-xl p-6 sm:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-100"
+            className="bg-white rounded-lg sm:rounded-xl p-6 sm:p-8 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-900"
           >
             <div className="flex flex-col h-full">
               <h3 className="text-black text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-center">

@@ -104,22 +104,22 @@ const Infrastructure: FC = () => {
       ],
       images: [
         {
-          src: "/img/mh furnace.png",
+          src: "/image/infra/mh furnace.png",
           alt: "M/H Furnace",
           description: "High-capacity Melting & Holding Furnace"
         },
         {
-          src: "/img/Tilting GDC.png",
+          src: "/image/infra/Tilting GDC.png",
           alt: "Tilting GDC",
           description: "Advanced Tilting Gravity Die Casting Machine"
         },
         {
-          src: "/img/stationary gdc.png",
+          src: "/image/infra/stationary gdc.png",
           alt: "Stationary GDC",
           description: "Precision Stationary Die Casting Unit"
         },
         {
-          src: "/img/core shooter.png",
+          src: "/image/infra/core shooter.png",
           alt: "Core Shooter",
           description: "Automated Core Shooting System"
         }
