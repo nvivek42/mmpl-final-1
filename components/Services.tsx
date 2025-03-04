@@ -1,13 +1,7 @@
 'use client'
 
 import React from 'react';
-import { Roboto } from 'next/font/google'
-
-const roboto = Roboto({
-  weight: ['400'],
-  subsets: ['latin']
-})
-
+import Image from 'next/image';
 
 const Services = () => {
   const services = [
@@ -29,10 +23,10 @@ const Services = () => {
   ];
 
   return (
-    <section className="w-full  px-4 sm:px-6 lg:px-20 py-14 ">
+    <section className="w-full  px-4 sm:px-6 lg:px-20 py-12 ">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight ${roboto.className}`}
+          <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight font-roboto`}
           >
             What We Do
           </h2>
@@ -52,12 +46,14 @@ const Services = () => {
            
               {/* Background Image with Parallax Effect */}
               <div 
-                className="absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-110"
-                style={{ 
-                  backgroundImage: `url(${service.bgImage})`,
-                  transform: 'scale(1.01)',
-                }}
-              >
+                className="absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-110">              
+                <Image 
+                  src={service.bgImage} 
+                  alt={service.title} 
+                  layout="fill" 
+                  objectFit="cover" 
+                  className="transform scale-101"
+                />
                 {/* Animated Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 group-hover:opacity-70 transition-opacity duration-500" />
                 

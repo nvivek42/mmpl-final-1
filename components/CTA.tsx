@@ -6,7 +6,7 @@ export default function CTA() {
     <section className="w-full bg-white px-20 py-20">
       <div className="container mx-auto">
         <div className="text-center">
-          <span className="text-3xl font-bold text-black sm:text-4xl">
+          <span className="text-3xl font-bold text-black sm:text-4xl font-roboto">
             Ready to Start Your Project?
           </span>
           <p className="mt-4 text-xl text-black/90">

@@ -71,7 +71,7 @@
       rgba(255, 255, 255, 0.3), 
       transparent
     );
-    transition: all 0.5s ease;
+    animation: continuousShine 2s linear infinite;
   }
   
   /* Hover animations */
@@ -111,3 +111,11 @@
   }
   
 
+  @keyframes continuousShine {
+    0% {
+      left: -100%;
+    }
+    50%, 100% {
+      left: 100%;
+    }
+  }

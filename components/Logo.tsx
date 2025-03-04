@@ -1,11 +1,6 @@
 // Logo.tsx
-import { Chakra_Petch } from 'next/font/google';
 import { useState, useEffect } from 'react';
 
-const chakraPetch = Chakra_Petch({
-    weight: ['400', '700'],
-    subsets: ['latin']
-});
 
 const Logo = () => {
     const [isLoaded, setIsLoaded] = useState(false);
@@ -25,7 +20,7 @@ const Logo = () => {
               <div className={`logo-chevron ${isLoaded ? 'animate-chevron-3' : ''}`}></div>
             </div>
           </div>
-          <div className={`logo-mmpl-text ${chakraPetch.className} ${isLoaded ? 'animate-text' : ''}`}>MMPL</div>
+          <div className={`logo-mmpl-text font-chakra-petch ${isLoaded ? 'animate-text' : ''}`}>MMPL</div>
         </div>
       </div>
     );

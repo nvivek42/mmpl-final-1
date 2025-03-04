@@ -1,11 +1,5 @@
 'use client'
 import { motion } from 'framer-motion'
-import { Roboto } from 'next/font/google'
-
-const roboto = Roboto({
-  weight: ['400'],
-  subsets: ['latin']
-})
 
 const About = () => {
   const animations = {
@@ -23,7 +17,7 @@ const About = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight ${roboto.className}`}
+            className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight font-roboto`}
           >
             Who We Are?
           </motion.h2>

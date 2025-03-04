@@ -1,11 +1,6 @@
 import Link from "next/link"
 import { SITE_TITLE, FOOTER_LINKS, CONTACT_INFO } from "@/config/site"
-import { Chakra_Petch } from "next/font/google"
 
-const chakraPetch = Chakra_Petch({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-})
 
 export default function Footer() {
   return (
@@ -14,7 +9,7 @@ export default function Footer() {
         {/* Title */}
         <div className="flex flex-col items-center mb-6 sm:mb-8">
           <div className="flex mb-1 text-center">
-            <span className={`text-2xl sm:text-3xl lg:text-4xl ${chakraPetch.className} font-bold px-4`}>
+            <span className={`text-2xl sm:text-3xl lg:text-4xl font-chakra-petch font-bold px-4`}>
               Metalmach Mastery Pvt Ltd
             </span>
           </div>

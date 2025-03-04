@@ -2,9 +2,6 @@
 
 import Image from 'next/image' // Import Next.js Image component
 import { useEffect, useState } from 'react'
-import { Roboto } from 'next/font/google'
-
-const roboto = Roboto({ weight: ['400'], subsets: ['latin'] })
 
 export default function Industries() {
   const [isLoading, setIsLoading] = useState(true)
@@ -14,7 +11,7 @@ export default function Industries() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-20">
 
         <div className="text-center">
-          <div className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900 tracking-tight ${roboto.className}`}>
+          <div className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900 tracking-tight font-roboto`}>
             Our Markets
           </div>
         </div>

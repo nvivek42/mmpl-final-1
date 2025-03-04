@@ -16,9 +16,7 @@ import {
   UserGroupIcon
 } from '@heroicons/react/24/solid'
 
-import { Roboto } from 'next/font/google'
 
-const roboto = Roboto({ weight: ['400'], subsets: ['latin'] })
 
 // Define HeroIcon type
 type HeroIconProps = SVGProps<SVGSVGElement> & {
@@ -258,7 +256,7 @@ const Infrastructure: FC = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={animations.container}
-            className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900 tracking-tight ${roboto.className}`}
+            className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900 tracking-tight font-roboto`}
           >
             Our Infrastructure
 

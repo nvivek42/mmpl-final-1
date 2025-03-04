@@ -3,12 +3,7 @@
 import { motion, HTMLMotionProps } from 'framer-motion';
 import { ArrowRightIcon, CogIcon, ShieldCheckIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 import { FC, ComponentType } from 'react';
-import { Roboto } from 'next/font/google'
 
-const roboto = Roboto({
-  weight: '400',
-  subsets: ['latin']
-})
 // Define our own IconProps type
 type HeroIconProps = {
   className?: string;
@@ -68,10 +63,10 @@ const Features: FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900 tracking-tight ${roboto.className} `}
+            className={`text-3xl font-bold sm:text-3xl lg:text-4xl text-gray-900 tracking-tight font-roboto`}
           >
             Why Choose MMPL?<br/>
-            <p className="text-xl text-gray-600 max-w-3xl py-2 mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl py-4 mx-auto">
             Discover the unique advantages that set us apart
           </p>
           </motion.h2>
@@ -104,11 +99,9 @@ const Features: FC = () => {
                           transition-all duration-300 ease-out"
               >
                 <div className="absolute inset-0 rounded-lg bg-gradient-to-br from-primary/5 via-primary/2 to-transparent 
-                              opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                              opacity-0 group-hover:opacity-100 transition-opacity duration-500"/>
                 
-                {/* <div className="relative">
-                  <Icon className="h-10 w-10 text-primary mb-4 transform group-hover:scale-110 transition-transform duration-300" />
-                </div> */}
+                
 
                 <h3 className="text-xl font-semibold mb-4 text-gray-900 group-hover:text-primary transition-colors duration-300">
                   {feature.title}

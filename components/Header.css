@@ -29,7 +29,7 @@
 /* Navigation link styling */
 .nav-link {
   font-weight: 600;
-  color: #4a4a4a;
+  color: #000000;
   padding: 0.5rem 1rem;
   transition: all 0.3s ease-in-out;
   position: relative;
@@ -126,7 +126,7 @@
 /* Base wrapper to control overall logo size */
 .logo-main {
   display: block;
-  width: 10vw; /* Use viewport width for responsiveness */
+  width: 12vw; /* Use viewport width for responsiveness */
   max-width: 50px; /* Set a maximum width */
   height: auto;
 }
@@ -223,7 +223,6 @@
   font-family: 'Chakra Petch';
   font-size: 2vw; /* Use viewport width for responsiveness */
   font-weight: 1000;
-  color: #4E5158;
   white-space: nowrap;
   text-transform: uppercase;
 }
@@ -236,11 +235,13 @@
   }
 
   .logo-mmpl-text {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
-
-/* Add these animations to your existing CSS while keeping all your original CSS */
+.animate-text {
+  color: rgb(0, 0, 0) !important; /* Use !important to override animation styles */
+  animation: none !important; /* Disable the color animation */
+}
 
 /* Initial states */
 .logo-tall-rectangle {

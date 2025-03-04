@@ -69,6 +69,11 @@ const config: Config = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        'chakra-petch': ['var(--font-chakra-petch)', 'sans-serif'],
+        'roboto': ['var(--font-roboto)', 'sans-serif'],
+        'inter': ['var(--font-inter)', 'sans-serif'],
+      },
     },
   },
 }

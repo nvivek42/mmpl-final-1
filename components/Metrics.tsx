@@ -162,10 +162,10 @@ export const Metrics = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
+                {/* <span className="inline-block px-4 py-1 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
                   Performance Metrics
-                </span>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                </span> */}
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 font-roboto">
                   Operational Excellence
                 </h2>
                 <div className="w-20 h-1.5 bg-gradient-to-r from-primary/60 to-primary rounded-full mx-auto mb-4"></div>
