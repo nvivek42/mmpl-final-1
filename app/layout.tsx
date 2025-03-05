@@ -34,6 +34,10 @@ export const viewport: Viewport = {
   initialScale: 1.0,
 }
 
+export const dynamic = 'force-static'
+export const revalidate = false
+
+
 export default function RootLayout({
   children,
 }: {

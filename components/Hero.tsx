@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import Link from 'next/link';
-import Image from 'next/image';
-import './Hero.css';
+import Link from "next/link";
+import Image from "next/image";
+import "./Hero.css";
 
 const Hero = () => {
   const heroRef = useRef<HTMLImageElement>(null);
@@ -46,14 +46,14 @@ const Hero = () => {
   //   if (windowWidth >= 1200) {
   //     return "top center";
   //   }
-    
+
   //   // For medium screens, gradually shift left
   //   if (windowWidth >= 768) {
   //     // Calculate percentage between 50% (center) and 30% (shifted left)
   //     const percentage = 50 - ((1200 - windowWidth) / (1200 - 768) * 20);
   //     return `top ${percentage}%`;
   //   }
-    
+
   //   // For mobile screens, shift further left
   //   return "top 10%";
   // };
@@ -85,8 +85,19 @@ const Hero = () => {
 
           <p className="text-xl md:text-2xl mb-4 font-light font-roboto tracking-wide text-white smooth-fade-in">
             <br />
-            Stop Losing Time & Money on Faulty Castings       </p>
-            <span className="text-xl md:text-2xl mb-4 font-light font-roboto tracking-wide text-white smooth-fade-in"> Fix It in One Call !    </span>
+            &nbsp;Stop Losing Time & Money on Faulty Castings
+            <span className="flex items-center space-x-2"> 
+            <Image
+              src="/svg/correct60.svg"
+              alt="Arrow Down"
+              width={50}
+              height={50}
+              className="text-white inline-block"
+            />
+            &nbsp; Fix It in One Call !
+          </span>
+          </p>
+          
           <div className="space-x-4 smooth-fade-in-buttons">
             <Link
               href="/Services"

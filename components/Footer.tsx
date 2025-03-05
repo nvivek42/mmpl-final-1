@@ -3,6 +3,7 @@ import { SITE_TITLE, FOOTER_LINKS, CONTACT_INFO } from "@/config/site"
 
 
 export default function Footer() {
+
   return (
     <footer className="bg-[#708090] text-white py-6 sm:py-8 lg:py-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-20">
