@@ -83,20 +83,7 @@ const Hero = () => {
             </div>
           </h1>
 
-          <p className="text-xl md:text-2xl mb-4 font-light font-roboto tracking-wide text-white smooth-fade-in">
-            <br />
-            &nbsp;Stop Losing Time & Money on Faulty Castings
-            <span className="flex items-center space-x-2"> 
-            <Image
-              src="/svg/correct60.svg"
-              alt="Arrow Down"
-              width={50}
-              height={50}
-              className="text-white inline-block"
-            />
-            &nbsp; Fix It in One Call !
-          </span>
-          </p>
+        
           
           <div className="space-x-4 smooth-fade-in-buttons">
             <Link
