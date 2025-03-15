@@ -15,7 +15,7 @@ const Header = () => {
   };
   // bg-gradient-to-r from-white-300 from-5% via-gray-300 via-[percentage:20%_70%] to-green-300 to-100%
   return (
-    <nav className="fixed w-full bg-gradient-to-b from-transparent via-white/65  to-transparent border:none top-0 z-50  px-4 sm:px-6 md:px-8 lg:px-20 py-5">
+    <nav className="fixed w-full bg-white border:none top-0 z-50  px-4 sm:px-6 md:px-8 lg:px-20 py-3">
       <div className="max-w-7xl mx-auto relative  flex items-center justify-between">
     
         <Link href="/" className="flex items-center space-x-2 sm:space-x-4">

@@ -10,6 +10,7 @@ const Metrics = lazy(() => import('../components/Metrics'));
 const About = lazy(() => import('@/components/About'));
 
 export default function Home() {
+
   return (
     <main>
       <Suspense fallback={<div>Loading...</div>}>
@@ -24,12 +25,12 @@ export default function Home() {
       <Suspense fallback={<div>Loading...</div>}>
         <Industries />
       </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      {/* <Suspense fallback={<div>Loading...</div>}>
         <Infra />
-      </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
+      </Suspense> */}
+      {/* <Suspense fallback={<div>Loading...</div>}>
         <Metrics />
-      </Suspense>
+      </Suspense> */}
       <Suspense fallback={<div>Loading...</div>}>
         <Features />
       </Suspense>

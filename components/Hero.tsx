@@ -8,55 +8,55 @@ import "./Hero.css";
 const Hero = () => {
   const heroRef = useRef<HTMLImageElement>(null);
   const [isMobile, setIsMobile] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [isClient, setIsClient] = useState(false);
 
-  // Check for mobile screen size and track window width
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     const width = window.innerWidth;
-  //     setIsMobile(width < 768);
-  //     setWindowWidth(width);
-  //   };
+  useEffect(() => {
+    // This ensures the component only fully renders on the client
+    setIsClient(true);
 
-  //   // Initial check
-  //   handleResize();
+    // Resize and scroll handlers
+    const handleResize = () => {
+      if (typeof window !== 'undefined') {
+        const width = window.innerWidth;
+        setIsMobile(width < 768);
+      }
+    };
 
-  //   // Add resize listener
-  //   window.addEventListener('resize', handleResize);
+    const handleScroll = () => {
+      if (heroRef.current && typeof window !== 'undefined') {
+        const scrolled = window.scrollY;
+        heroRef.current.style.transform = `translateY(${scrolled * 0.5}px)`;
+      }
+    };
 
-  //   // Cleanup
-  //   return () => window.removeEventListener('resize', handleResize);
-  // }, []);
+    // Initial check
+    handleResize();
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     if (heroRef.current) {
-  //       const scrolled = window.scrollY;
-  //       heroRef.current.style.transform = `translateY(${scrolled * 0.5}px)`;
-  //     }
-  //   };
+    // Add listeners
+    window.addEventListener('resize', handleResize);
+    window.addEventListener("scroll", handleScroll);
 
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, []);
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
-  // Calculate background position based on screen width
-  // const calculateBackgroundPosition = () => {
-  //   // For large screens, keep 'top center'
-  //   if (windowWidth >= 1200) {
-  //     return "top center";
-  //   }
-
-  //   // For medium screens, gradually shift left
-  //   if (windowWidth >= 768) {
-  //     // Calculate percentage between 50% (center) and 30% (shifted left)
-  //     const percentage = 50 - ((1200 - windowWidth) / (1200 - 768) * 20);
-  //     return `top ${percentage}%`;
-  //   }
-
-  //   // For mobile screens, shift further left
-  //   return "top 10%";
-  // };
+  // If not client-side, return null or a placeholder
+  if (!isClient) {
+    return (
+      <section className="relative h-screen w-full overflow-hidden">
+        <div className="px-4 md:px-8 lg:px-20 py-16 text-white relative z-10 text-left max-w-[1400px] w-full">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white font-['Outfit'] mb-6 py-20 leading-tight">
+            Built on Precision
+            <br />
+            Driven by Innovation!
+          </h1>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="relative h-screen w-full overflow-hidden">
@@ -82,8 +82,6 @@ const Hero = () => {
               Driven by Innovation!
             </div>
           </h1>
-
-        
           
           <div className="space-x-4 smooth-fade-in-buttons">
             <Link

@@ -8,18 +8,19 @@ export const NAV_LINKS = [
     label: 'Home' 
   },
   { 
-    href: '/Services', 
-    label: 'Services',
-    subLinks: [
-      { href: '/services/casting', label: 'Metal Casting' },
-      { href: '/services/machining', label: 'CNC Machining' },
-      { href: '/services/prototyping', label: 'Prototyping' }
-    ]
-  },
-  { 
     href: '/about', 
     label: 'About Us' 
   },
+  { 
+    href: '/services', 
+    label: 'Services',
+    subLinks: [
+      { href: '/services/gravity-die-casting', label: 'Gravity Die Casting' },
+      { href: '/services/precision-machining', label: 'Precision Machining' },
+      { href: '/services/custom-development', label: 'Custom Development' }
+    ]
+  },
+  
   
   { 
     href: '/contact', 

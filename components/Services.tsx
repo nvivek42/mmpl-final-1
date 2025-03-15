@@ -2,38 +2,40 @@
 
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Services = () => {
   const services = [
     {
       title: 'Gravity Die Casting',
       description: 'Specialized in aluminum alloy components ranging from 0.5 to 5 kg',
-      bgImage: '/image/misc/gdc.webp'
+      bgImage: '/image/misc/gdc.webp',
+      slug: 'gravity-die-casting'
     },
     {
       title: 'Precision Machining',
       description: 'Advanced component machining with high precision',
-      bgImage: '/image/misc/pm.webp'
+      bgImage: '/image/misc/pm.webp',
+      slug: 'precision-machining'
     },
     {
       title: 'Custom Development',
       description: 'Customer-specific development and solutions',
-      bgImage: '/image/misc/cd.jpg'
+      bgImage: '/image/misc/cd.jpg',
+      slug: 'custom-development'
     },
   ];
 
   return (
-    <section className="w-full  px-4 sm:px-6 lg:px-20 py-12 ">
+    <div className='services'>  
+    <section className="w-full px-4 sm:px-6 lg:px-20 py-12">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight font-roboto`}
-          >
+          <h2 className={`text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight font-roboto`}>
             What We Do
           </h2>
-          <p className="text-gray-600 max-w-3xl mx-auto py-5 "><i>
-            {/* Our commitment to maintaining the highest standards of manufacturing excellence
-            through continuous monitoring and improvement of key performance indicators. */}
-           Your Vision, Our Expertise: Aluminum Solutions Tailored for You</i>
+          <p className="text-gray-600 max-w-3xl mx-auto py-5"><i>
+            Your Vision, Our Expertise: Aluminum Solutions Tailored for You</i>
           </p>
         </div>
 
@@ -43,7 +45,6 @@ const Services = () => {
               key={service.title}
               className="group relative h-[300px] sm:h-[350px] rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer"
             > 
-           
               {/* Background Image with Parallax Effect */}
               <div 
                 className="absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-110">              
@@ -72,11 +73,14 @@ const Services = () => {
                     {service.description}
                   </p>
                   
-                  {/* Button with Glow Effect */}
-                  <button className="w-full py-2.5 px-4 bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 border border-white/10 relative overflow-hidden ">
-                    <span className="relative z-10">Read More</span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  </button><br/><br/>
+                  {/* Button with Glow Effect - Now wrapped in Link component */}
+                  <Link href={`/services/${service.slug}`}>
+                    <button className="w-full py-2.5 px-4 bg-white/10 hover:bg-white/20 text-white rounded-lg backdrop-blur-sm transition-all duration-300 border border-white/10 relative overflow-hidden">
+                      <span className="relative z-10">Read More</span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    </button>
+                  </Link>
+                  <br/><br/>
                 </div>
               </div>
             </div>
@@ -84,6 +88,7 @@ const Services = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 
