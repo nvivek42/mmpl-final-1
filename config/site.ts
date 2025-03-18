@@ -3,29 +3,35 @@
 export const SITE_TITLE = 'METALMACH MASTERY';
 
 export const NAV_LINKS = [
-  { 
-    href: '/', 
-    label: 'Home' 
-  },
+ 
   { 
     href: '/about', 
-    label: 'About Us' 
+    label: 'Who We Are' 
   },
   { 
     href: '/services', 
-    label: 'Services',
-    subLinks: [
+    label: 'What We Do',
+    dropdownItems: [
       { href: '/services/gravity-die-casting', label: 'Gravity Die Casting' },
       { href: '/services/precision-machining', label: 'Precision Machining' },
       { href: '/services/custom-development', label: 'Custom Development' }
     ]
   },
-  
+  {
+    label: 'Industries',
+    href: '/industries',
+    dropdownItems: [
+      { label: 'Automotive', href: '/industries/automotive' },
+      { label: 'Agriculture', href: '/industries/agriculture' },
+      { label: 'Energy', href: '/industries/energy' },
+      { label: 'Defense', href: '/industries/defense' },
+    ]
+  },
   
   { 
     href: '/contact', 
     label: 'Contact' 
-  }
+  },
 ];
 
 
@@ -36,9 +42,9 @@ export const FOOTER_LINKS = {
     { href: '/careers', label: 'Careers' },
   ],
   Services: [
-    { href: '/services/casting', label: 'Metal Casting' },
-    { href: '/services/machining', label: 'CNC Machining' },
-    { href: '/services/prototyping', label: 'Prototyping' }
+    { href: '/services/gravity-die-casting', label: 'Gravity Die Casting' },
+    { href: '/services/precision-machining', label: 'Precision Machining' },
+    { href: '/services/custom-development', label: 'Custom Development' }
   ],
   
 };

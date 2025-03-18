@@ -4,7 +4,7 @@ import Infra from '@/components/Infra'
 
 export default function AboutPage() {
   return (
-    <main className="pt-20">
+    <main className="pt-20 py-20">
       <section className="w-full bg-white px-4 sm:px-6 md:px-8 lg:px-20 py-8 sm:py-12 lg:py-16">
         <div className="container mx-auto max-w-5xl">
           <motion.div

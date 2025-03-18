@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function GravityDieCasting() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 py-20">
       {/* Hero Section */}
       <div className="relative h-[40vh] md:h-[60vh]">
         <Image

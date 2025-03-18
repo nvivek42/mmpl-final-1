@@ -5,7 +5,7 @@ import { SITE_TITLE, FOOTER_LINKS, CONTACT_INFO } from "@/config/site"
 export default function Footer() {
 
   return (
-    <footer className="bg-[#708090] text-white py-6 sm:py-8 lg:py-10">
+    <footer className="bg-[#ffff] text-black py-6 sm:py-8 lg:py-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-20">
         {/* Title */}
         <div className="flex flex-col items-center mb-6 sm:mb-8">
@@ -22,7 +22,7 @@ export default function Footer() {
           <div className="grid grid-cols-2 md:col-span-2 lg:col-span-2 gap-6 sm:gap-8">
           {Object.entries(FOOTER_LINKS).map(([category, links]) => (
             <div key={category} className="space-y-3 sm:space-y-4 px-4 sm:px-0">
-              <h4 className="text-base sm:text-lg font-semibold text-white text-center sm:text-left">
+              <h4 className="text-base sm:text-lg font-semibold text-black text-center sm:text-left">
                 {category}
               </h4>
               <ul className="space-y-2 text-center sm:text-left">
@@ -30,7 +30,7 @@ export default function Footer() {
                   <li key={link.href}>
                     <Link 
                       href={link.href} 
-                      className="hover:text-white transition-colors text-sm sm:text-base block py-1 sm:py-0"
+                      className="hover:text-blue-500 transition-colors text-sm sm:text-base block py-1 sm:py-0"
                     >
                       {link.label}
                     </Link>
@@ -42,7 +42,7 @@ export default function Footer() {
 </div>
           {/* Contact Information */}
           <div className="space-y-3 sm:space-y-4 px-4 sm:px-0">
-            <h4 className="text-base sm:text-lg text-white font-semibold text-center sm:text-left">
+            <h4 className="text-base sm:text-lg text-black font-semibold text-center sm:text-left">
               Contact
             </h4>
             <ul className="space-y-3 text-sm sm:text-base">
@@ -96,7 +96,7 @@ export default function Footer() {
         {/* Copyright and Legal */}
         <div className="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-black">
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0">
-            <p className="text-xs sm:text-sm text-white text-center">
+            <p className="text-xs sm:text-sm text-black text-center">
               {new Date().getFullYear()} {SITE_TITLE}. All Rights Reserved.
             </p>
             <div className="flex space-x-4 sm:ml-4">

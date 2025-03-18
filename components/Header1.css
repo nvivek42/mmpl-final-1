@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;700&display=swap");
+
+.site-title {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 900;
+  color: #000000;
+  margin-left: 0.5rem;
+  /* text-transform: uppercase; */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+}
+
+
+/* Navigation link styling */
+.nav-link {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: light;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+
+
+/* Underline effect for nav links */
+/* .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff4d4d;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+} */
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+  .nav-link {
+    padding: 0.75rem 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  
+
+}
+
+
+/* Optional: Reduce motion if user prefers */
+@media (prefers-reduced-motion: reduce) {
+  .site-title,
+  .nav-link {
+    transition: none;
+  }
+}
+
+/* Logo styles */
+
+/* Base wrapper to control overall logo size */
+.logo-main {
+  display: block;
+  width:  50px; /* Use viewport width for responsiveness */
+  height: auto;
+}
+
+.logo-container {
+  position: relative;
+  width: 100%; /* Use viewport width for responsiveness */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center items horizontally */
+}
+
+.logo-border1 {
+  position: relative;
+  width: 50px;
+  height: 57px;
+  border-bottom: 10px solid #4e5158;
+  border-left: 10px solid #4e5158;
+  border-right: none;
+  box-sizing: border-box;
+}
+
+.logo-border1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  border-top: 10px solid #4e5158;
+}
+
+.logo-tall-rectangle {
+  position: absolute;
+  top: 0;
+  left: 16.5px;
+  width: 8px;
+  height: 16px;
+  background-color: #ff6701;
+  border-bottom-right-radius: 5px;
+}
+
+.logo-chevron-container {
+  position: absolute;
+  bottom: 6px;
+  left: 0;
+}
+
+.logo-chevron {
+  position: relative;
+  margin-left: 10px auto;
+  margin-top: 0;
+  width: 40px;
+  height: 7.5px;
+}
+
+.logo-chevron:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background: #4e5158;
+  transform: skew(0deg, 30deg);
+}
+
+.logo-chevron:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: #4e5158;
+  transform: skew(0deg, -30deg);
+}
+
+.chevron-yellow:before,
+.chevron-yellow:after {
+  background: #ffdb00;
+}
+
+.logo-mmpl-text {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  font-family: "Chakra Petch";
+  font-weight: 600;
+  color: #4e5158;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+  .logo-main {
+    width: 40px;
+  }
+ 
+  .logo-mmpl-text {
+    font-size: 0.7rem; /* 14px for small screens */
+  }
+  
+  /* .site-title {
+    margin-left: 1rem;
+  } */
+}
+
+@media (min-width: 768px) { /* md */
+  .logo-mmpl-text {
+    font-size: 0.9rem; /* 16px for medium screens */
+  }
+  .logo-main {
+    width: 50px;
+  }
+  
+  /* .site-title {
+    margin-left: 1.25rem;
+  } */
+}
+
+@media (min-width: 1024px) { /* lg */
+  .logo-mmpl-text {
+    font-size: 0.9rem; /* 18px for large screens */
+  }
+   .logo-main {
+    width: 55px;
+  }
+  
+  /* .site-title {
+    margin-left: 1.5rem;
+  } */
+}
+
+/* Initial states */
+.logo-tall-rectangle {
+  height: 0;
+}
+
+.logo-chevron {
+  opacity: 0;
+}
+
+
+
+.logo-border1 {
+  border-color: transparent;
+}
+
+.logo-border1::before {
+  border-top-color: transparent;
+}
+
+@keyframes fillBorder {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: #4e5158;
+  }
+}
+
+@keyframes fillBorderTop {
+  from {
+    border-top-color: transparent;
+  }
+  to {
+    border-top-color: #4e5158;
+  }
+}
+
+@keyframes fillRectangle {
+  from {
+    height: 0;
+  }
+  to {
+    height: 16px;
+  }
+}
+
+@keyframes fillChevron {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillText {
+  from {
+    color: transparent;
+  }
+  to {
+    color: #4e5158;
+  }
+}
+
+/* Animation classes */
+.animate-border {
+  animation: fillBorder 0.5s ease-out forwards;
+}
+
+.animate-border::before {
+  animation: fillBorderTop 0.5s ease-out forwards;
+}
+
+.logo-tall-rectangle {
+  height: 0;
+  animation: fillRectangle 0.5s ease-out 0.5s forwards;
+}
+
+.animate-chevron-1 {
+  opacity: 0;
+  animation: fillChevron 0.3s ease-out 1s forwards;
+}
+
+.animate-chevron-2 {
+  opacity: 0;
+  animation: fillChevron 0.3s ease-out 1.3s forwards;
+}
+
+.animate-chevron-3 {
+  opacity: 0;
+  animation: fillChevron 0.3s ease-out 1.6s forwards;
+}
+
+.animate-text {
+  color: transparent;
+  animation: fillText 0.3s ease-out 1.9s forwards;
+}
+
+/* Add this to ensure chevrons maintain their shape */
+.logo-chevron:before,
+.logo-chevron:after {
+  transition: background-color 0.3s ease-out;
+}
