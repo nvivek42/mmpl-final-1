@@ -105,7 +105,7 @@ const FullScreenGrid = () => {
                   hoveredItem === item.id ? "scale-110" : "scale-100"
                 }`}
               />
-              <div className="absolute inset-0 bg-black/30 flex items-start justify-start p-6">
+              <div className="absolute inset-0 bg-black/30 flex items-start justify-start p-16">
                 <div
                   className={`text-white text-left transition-all duration-300 ${
                     hoveredItem === item.id ? "scale-110" : "scale-100"
