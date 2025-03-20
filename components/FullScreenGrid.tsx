@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import "./FullScreenGrid.css";
 
 // Types for grid items
 interface GridItem {
@@ -17,31 +18,24 @@ interface GridItem {
 const gridItems: GridItem[] = [
   {
     id: "leadership",
-    imageSrc: "/image/full-screen-grid/leadership.jpg",
+    imageSrc: "/image/full-screen-grid/leadership1.jpg",
     title: "Leadership",
     link: "/who-we-are/leadership",
     alt: "Our leadership",
   },
   {
     id: "expertise",
-    imageSrc: "/image/full-screen-grid/expertise.jpg",
+    imageSrc: "/image/full-screen-grid/expertise1.jpg",
     title: "Expertise",
     link: "/who-we-are/expertise",
     alt: "Our expertise",
   },
   {
     id: "investors",
-    imageSrc: "/image/full-screen-grid/investors.jpg",
+    imageSrc: "/image/full-screen-grid/investors1.jpg",
     title: "Investors",
     link: "/who-we-are/facilities",
     alt: "investors",
-  },
-  {
-    id: "automotive",
-    imageSrc: "/image/full-screen-grid/auto.jpg",
-    title: "Automotive",
-    link: "/what-we-do/automotive",
-    alt: "Automotive solutions",
   },
   {
     id: "e-mobility",
@@ -51,6 +45,14 @@ const gridItems: GridItem[] = [
     alt: "E-Mobility solutions",
   },
   {
+    id: "automotive",
+    imageSrc: "/image/full-screen-grid/auto2.jpg",
+    title: "Automotive",
+    link: "/what-we-do/automotive",
+    alt: "Automotive solutions",
+  },
+
+  {
     id: "non-automotive",
     imageSrc: "/image/full-screen-grid/non-auto.jpg",
     title: "Non-Automotive",
@@ -59,7 +61,7 @@ const gridItems: GridItem[] = [
   },
   {
     id: "sustainability",
-    imageSrc: "/image/full-screen-grid/sustainability.jpg",
+    imageSrc: "/image/full-screen-grid/sustainability1.jpg",
     title: "Sustainability",
     link: "/what-we-do/non-automotive",
     alt: "Non-automotive solutions",
@@ -81,8 +83,6 @@ const gridItems: GridItem[] = [
 ];
 
 const FullScreenGrid = () => {
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-
   return (
     <div className="w-full">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
@@ -90,33 +90,21 @@ const FullScreenGrid = () => {
           <Link
             href={item.link}
             key={item.id}
-            className="relative block w-full h-64 md:h-80 lg:h-96 overflow-hidden cursor-pointer"
-            onMouseEnter={() => setHoveredItem(item.id)}
-            onMouseLeave={() => setHoveredItem(null)}
+            className="grid-item relative block w-full h-64 md:h-80 lg:h-96 overflow-hidden cursor-pointer"
           >
             <div className="relative w-full h-full">
               <Image
                 src={item.imageSrc}
                 alt={item.alt}
-                loading="eager"  // Change from priority
-
+                loading="eager"
                 fill
-                className={`object-cover transition-transform duration-500 ${
-                  hoveredItem === item.id ? "scale-110" : "scale-100"
-                }`}
+                className="grid-image object-cover"
               />
-              <div className="absolute inset-0 bg-black/30 flex items-start justify-start p-16">
-                <div
-                  className={`text-white text-left transition-all duration-300 ${
-                    hoveredItem === item.id ? "scale-110" : "scale-100"
-                  }`}
-                >
-                  <h3 className="text-2xl font-bold font-chakra-petch">
+              <div className="absolute inset-0  bg-opacity-30 flex items-start justify-start p-16">
+                <div className="grid-title-wrapper">
+                  <h3 className="text-2xl font-bold font-chakra-petch relative text-[#FFA500] hover-effect">
                     {item.title}
                   </h3>
-                  {/* <div className={`mt-2 w-12 h-1 bg-white transition-all duration-300 ${
-        hoveredItem === item.id ? "w-20" : "w-12"
-      }`}></div> */}
                 </div>
               </div>
             </div>

@@ -46,6 +46,7 @@ export const FOOTER_LINKS = {
     { href: '/services/precision-machining', label: 'Precision Machining' },
     { href: '/services/custom-development', label: 'Custom Development' }
   ],
+ 
   
 };
 
@@ -55,3 +56,33 @@ export const CONTACT_INFO = {
   address: "F-39,Chincholi MIDC,Solapur",
   address1:"Mah,India - 413255",
 };
+
+export const Who_We_Are = {
+  title: 'Who We Are',
+  items: [
+    "Overview",
+    "Leadership",
+    "Management",
+    "Expertise",
+    "Facilities",
+    "Certifications",
+    "Sustainability",
+    "History",
+    "Recognition",
+  ],
+};
+export const What_We_Do = {
+  items: [
+    "Overview",
+    "Leadership",
+    "Management",
+    "Expertise",
+    "Facilities",
+    "Certifications",
+    "Sustainability",
+    "History",
+    "Recognition",
+  ],
+};
+
+

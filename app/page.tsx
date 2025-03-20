@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from "react";
 import FullScreenGrid from "@/components/FullScreenGrid";
+import CheckFooter from "@/components/CheckFooter";
 
 const Hero = lazy(() => import("../components/Hero"));
 const Services = lazy(() => import("../components/Services"));
@@ -40,6 +41,9 @@ export default function Home() {
       {/* <Suspense fallback={<div>Loading...</div>}>
         <CTA />
       </Suspense> */}
+            <div className="flex-grow"></div>
+
+      <CheckFooter/>
     </main>
   );
 }

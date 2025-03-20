@@ -49,7 +49,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-white">
         <Header />
         <main>{children}</main>
-        <Footer />
+        {/* <Footer/> */}
       </body>
     </html>
   )

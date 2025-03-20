@@ -1,0 +1,38 @@
+.hover-effect {
+  position: relative;
+  text-decoration: none;
+  padding: 0.2em 0;
+  display: inline-block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-effect::before {
+  background: white;
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.grid-item:hover .hover-effect::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.grid-item:hover .grid-image {
+  transform: scale(1.1);
+}
+
+.grid-image {
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out;
+}
+
+.grid-title-wrapper {
+  position: relative;
+  z-index: 10;
+  padding: 0.5rem 1rem;
+}
